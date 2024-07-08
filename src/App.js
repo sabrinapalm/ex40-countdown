@@ -132,7 +132,7 @@ function App() {
         url='https://www.youtube.com/watch?v=niKT-kJfUz4'
         playing
         loop
-        controls
+        controls={false}
         volume={0.5}
         muted={false}
         width='100%'
