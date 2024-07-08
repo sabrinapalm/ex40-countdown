@@ -52,7 +52,8 @@ const styles = {
     alignItems: 'center',
     position: 'relative',
     overflow: 'hidden',
-     letterSpacing: '2px'
+    letterSpacing: '2px',
+    padding: '20px'
   },
   image: {
     position: 'absolute',
@@ -72,7 +73,9 @@ const styles = {
   timer: {
     display: 'flex',
     alignItems: 'center',
-    zIndex: 1
+    zIndex: 1,
+    flexWrap: 'wrap',
+    justifyContent: 'center'
   },
   timeUnit: {
     margin: '0 10px',
@@ -101,11 +104,29 @@ const styles = {
   }
 };
 
+const AppCSS = `
+@media (max-width: 768px) {
+  .timeUnit span.number {
+    font-size: 2.5rem;
+  }
+  .separator {
+    font-size: 2.5rem;
+  }
+  .header {
+    font-size: 1.5rem;
+  }
+  .label {
+    font-size: 0.8rem;
+  }
+}
+`;
+
 function App() {
   const deliveryDate = new Date('2024-10-21T00:00:00');
 
   return (
     <div>
+      <style>{AppCSS}</style>
       <Countdown date={deliveryDate} renderer={renderer} />
       <ReactPlayer
         url='https://www.youtube.com/watch?v=niKT-kJfUz4'
