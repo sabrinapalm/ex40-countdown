@@ -122,7 +122,7 @@ const AppCSS = `
 `;
 
 function App() {
-  const deliveryDate = new Date('2024-10-14T00:00:00');
+  const deliveryDate = new Date('2024-10-07T14:00:00');
 
   return (
     <div>
