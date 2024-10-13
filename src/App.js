@@ -4,7 +4,30 @@ import ReactPlayer from 'react-player';
 import './App.css';
 import image from './assets/default.avif';
 
-const Completionist = () => <span>Grattis! Din EX40 har anlänt!</span>;
+const Completionist = () => (
+  <div style={completionistStyles.container}>
+    <span style={completionistStyles.text}>Grattis! Din EX40 har anlänt! 🎉</span>
+  </div>
+);
+
+const completionistStyles = {
+  container: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '100vh',
+    color: 'white',
+    flexDirection: 'column',
+    textAlign: 'center',
+    padding: '20px',
+  },
+  text: {
+    fontSize: '3rem',
+    fontWeight: 'bold',
+    letterSpacing: '2px',
+  },
+};
+
 
 const renderer = ({ days, hours, minutes, seconds, completed }) => {
   if (completed) {
